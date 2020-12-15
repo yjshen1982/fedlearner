@@ -258,5 +258,6 @@ class DataPortalWorker(object):
                 logging.warning("Receive pending response.")
             else:
                 logging.warning("The response from master is invalid.")
-            logging.info("GC in run, collect=%d, garbage=%s", gc.collect(), gc.garbage)
+            logging.info("GC in run, collect=%d, garbage=%s",
+                         gc.collect(), gc.garbage)
             time.sleep(2)
